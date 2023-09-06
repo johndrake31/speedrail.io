@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('./fonts/CenturyGothic.woff') format('woff'),
+       url('./fonts/CenturyGothic.ttf') format('truetype');
+       
+  /* You might need other formats for broader compatibility */
+  /* e.g., eot, svg */
+}
+
+body {
+  font-family: 'Century Gothic', sans-serif;
+}
