@@ -6,18 +6,19 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import useWindowDimensions from "../../hooks/UseWindowDimensions";
-import logoTitle from "../../assets/spokesolve_no_bg.svg";
-import TitleText from "../../assets/ss_title_text.svg";
+import logoTitle from "../../assets/speedrail_io.svg";
 export interface ICustomForm {
   status: any;
   message: any;
   onValidated: any;
 }
 const style = {
-  width: "80%",
+  width: "70%",
+  marginTop: 5,
+  marginBottom: "auto",
   marginRight: "auto",
   marginLeft: "auto",
   bgcolor: "background.paper",
@@ -59,15 +60,7 @@ const CustomForm: React.FC<ICustomForm> = ({
     setOpen(false);
   };
 
-  useEffect(() => {
-    const hasShown = localStorage.getItem("hasShownEmailform");
-    if (!hasShown) {
-      setTimeout(() => {
-        localStorage.setItem("hasShownEmailform", "true");
-        handleOpen();
-      }, 1000);
-    }
-  }, []);
+
 
   return (
     <>
@@ -89,13 +82,8 @@ const CustomForm: React.FC<ICustomForm> = ({
             onClick={handleClose}
           />
           <img
-            style={{ maxHeight: 80, borderRadius: 12 }}
+            style={{ maxHeight: 100, borderRadius: 12 }}
             src={logoTitle}
-            alt="logo"
-          />
-          <img
-            style={{ maxHeight: 80, borderRadius: 12 }}
-            src={TitleText}
             alt="logo"
           />
           <Typography

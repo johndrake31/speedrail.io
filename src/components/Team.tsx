@@ -28,21 +28,21 @@ const Team = () => {
           flexDirection: "column",
           alignItems: "center",
           backgroundColor: LAVENDER,
-          minHeight: 400,
+          minHeight: 300,
           minWidth: "100%",
         }}
       >
         <Typography
           variant="h3"
           color={"white"}
-          sx={{ textAlign: "center", marginTop: 3, marginBottom: 3 }}
+          sx={{ textAlign: "center", marginBottom: 2 }}
         >
           Our Purpose
         </Typography>
         <Typography
-          variant="h4"
+          variant="h5"
           color={"white"}
-          sx={{ textAlign: "center", marginTop: 3, marginBottom: 3 }}
+          sx={{ textAlign: "center", marginTop: 3, marginBottom: 2 }}
         >
           To revolutionize restaurant technology with radical openness,
           partnerships, and excellence.

@@ -1,15 +1,15 @@
 import React from "react";
 import { Box } from "@mui/material";
-import logoSvg from "../assets/spokesolve_no_bg.svg";
-import titleText from "../assets/ss_title.png";
+
+import titleText from "../assets/speedrail_io.svg";
 import { themeColors } from "../constants/colors";
 
 const LogoSlogan = () => {
-  const { WHITE } = themeColors;
+  const { WHITE, PRIME_BLUE_OP } = themeColors;
   return (
     <Box
       sx={{
-        backgroundColor: "#5336579f",
+        backgroundColor: PRIME_BLUE_OP,
         height: "100%",
         minHeight: 300,
         padding: 3,
@@ -21,7 +21,7 @@ const LogoSlogan = () => {
           maxHeight: 200,
           width: 200,
           height: 200,
-          borderRadius: "50%",
+
           backgroundColor: WHITE,
           display: "flex",
           flexDirection: "column",
@@ -29,21 +29,13 @@ const LogoSlogan = () => {
           padding: 5,
         }}
       >
-        <img
-          src={logoSvg}
-          className="App-logo"
-          alt="logo"
-          width={"60%"}
-          style={{ marginRight: "auto", marginLeft: "auto" }}
-        />
         <Box sx={{ display: "flex", flexDirection: "column" }}>
           <img
             src={titleText}
             alt="Spoke Solve Title"
-            width={ "60%"}
+            width={"100%"}
             style={{ marginRight: "auto", marginLeft: "auto" }}
           />
-         
         </Box>
       </Box>
     </Box>

@@ -1,24 +1,23 @@
 import React from "react";
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import { themeColors } from "../constants/colors";
-import useWindowDimensions from "../hooks/UseWindowDimensions";
 
 const Mission = () => {
   const matches = useMediaQuery("(min-width:700px)");
 
-  const { WHITE } = themeColors;
+  const { WHITE, PRIME_BLUE } = themeColors;
   return (
     <Box
       sx={{
         textAlign: "center",
         display: "flex",
-        flexDirection: matches ? "row" : "column"
+        flexDirection: matches ? "row" : "column",
       }}
     >
       <Box
         sx={{
           maxWidth: matches ? 280 : "auto",
-          backgroundColor: "#533897",
+          backgroundColor: PRIME_BLUE,
           color: WHITE,
           padding: 3,
         }}
@@ -39,7 +38,8 @@ const Mission = () => {
             fontWeight: 500,
           }}
         >
-          TO SUPPORT RESTAURANTS WITH THEIR TECHNOLOGY TODAY WHILE EMPOWERING THE SOLUTIONS OF TOMORROW
+          TO SUPPORT RESTAURANTS WITH THEIR TECHNOLOGY TODAY WHILE EMPOWERING
+          THE SOLUTIONS OF TOMORROW
         </Typography>
       </Box>
       <Box
@@ -55,11 +55,11 @@ const Mission = () => {
           sx={{
             fontFamily: "Outfit",
             fontWeight: 500,
-            color: "#533897",
-            marginRight: 2
+            color: PRIME_BLUE,
+            marginRight: 2,
           }}
         >
-          24
+          25X
         </Typography>
         <Typography
           variant="h6"
@@ -67,10 +67,11 @@ const Mission = () => {
             fontFamily: "Outfit",
             fontWeight: 500,
             maxWidth: 700,
+            textAlign: "left",
           }}
         >
-          Billion $ is what restaurants in North America spend annually on
-          technology. Annual forecast predict this number will grow 5-10% annually
+          Did you know that it costs up to 25X more to acquire a new customer
+          than to retain an existing one?
         </Typography>
       </Box>
     </Box>
