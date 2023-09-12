@@ -3,7 +3,7 @@ import React from "react";
 import McEmailContainer from "./mail-chimp-forms/McEmailContainer.component";
 import { themeColors } from "../constants/colors";
 const VisionBar = () => {
-  const { WHITE, LAVENDER } = themeColors;
+  const { WHITE, PRIME_BLUE } = themeColors;
 
   return (
     <Container
@@ -12,9 +12,9 @@ const VisionBar = () => {
         justifyContent: "center",
         flexDirection: "column",
         alignItems: "center",
-        backgroundColor: LAVENDER,
+        backgroundColor: PRIME_BLUE,
         minHeight: 200,
-        minWidth: "100%",
+        width: "100%",
         px: 5,
         py: 5,
       }}
@@ -28,7 +28,7 @@ const VisionBar = () => {
       </Typography>
       <br />
       <Typography
-        variant="h5"
+        variant="h6"
         color={WHITE}
         sx={{ textAlign: "center", marginTop: 3, paddingX: 3 }}
       >

@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   BottomNavigation,
   BottomNavigationAction,
@@ -9,16 +9,18 @@ import React, { useEffect } from "react";
 import HomeIcon from "@mui/icons-material/Home";
 import GroupsIcon from "@mui/icons-material/Groups";
 import { NavRoutes } from "../constants/routes";
-
+import { themeColors } from "../constants/colors";
 const NavBar = () => {
 
   const { HOME, TEAM } = NavRoutes;
   const [routeValue, setValue] = React.useState('');
   const navigate = useNavigate();
   
+const { PEACH } = themeColors;
+
   useEffect(() => {   
     navigate(routeValue);
-  }, [routeValue]);
+  }, [navigate, routeValue]);
 
   return (
     <Container
@@ -37,6 +39,11 @@ const NavBar = () => {
           onChange={(event, newValue) => {
             setValue(newValue);
           }}
+          sx={{
+            "& .Mui-selected, .Mui-selected > svg": {
+              color: PEACH
+            }
+        }}
         >
           <BottomNavigationAction
             label="Home"

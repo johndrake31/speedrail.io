@@ -9,15 +9,15 @@ import {
   Container,
   Typography,
   Link,
-  Icon,
 } from "@mui/material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
 import { themeColors } from "../constants/colors";
 import { founders } from "../constants/team";
 
 const Team = () => {
   const matches = useMediaQuery("(min-width:660px)");
-  const { WHITE, LAVENDER } = themeColors;
+  const { WHITE, PRIME_BLUE } = themeColors;
 
   return (
     <>
@@ -27,7 +27,7 @@ const Team = () => {
           justifyContent: "center",
           flexDirection: "column",
           alignItems: "center",
-          backgroundColor: LAVENDER,
+          backgroundColor: PRIME_BLUE,
           minHeight: 300,
           minWidth: "100%",
         }}
@@ -62,7 +62,7 @@ const Team = () => {
       >
         <Typography
           variant="h3"
-          color={LAVENDER}
+          color={PRIME_BLUE}
           sx={{ textAlign: "center", marginTop: 3, marginBottom: 3 }}
         >
           Our Founders
@@ -76,21 +76,22 @@ const Team = () => {
                 card.founder && (
                   <>
                     <Card
-                      key={index*3.3333}
+                      key={card.id}
                       sx={{
                         maxWidth: 345,
                         paddingX: 4,
                         paddingY: 3,
                         marginX: 2,
                         marginY: 2,
-                        backgroundColor: LAVENDER,
+                        backgroundColor: PRIME_BLUE,
+                        flex: matches ? "1 1 0": 'none',
                       }}
                     >
                       <CardActionArea>
                         <Avatar
                           sx={{ width: 100, height: 100 }}
                           src={card.image}
-                          alt="green iguana"
+                          alt={"founder image"}
                         />
 
                         <CardContent>
@@ -117,6 +118,9 @@ const Team = () => {
                         <Link sx={{color: WHITE}} href={card.linkedin} target="_blank" rel="noopener">
                           {card.linkedin && <LinkedInIcon/>}
                         </Link>
+                        {card.email && <Link sx={{color: WHITE, ml: 1}} href={`mailto:${card.email}`} target="_blank" rel="noopener noreferrer">
+                          {card.email && <EmailIcon/>}
+                        </Link>}
                       </CardActionArea>
                     </Card>
                     <br />
@@ -132,11 +136,10 @@ const Team = () => {
           justifyContent: "center",
           alignItems: "center",
           minWidth: "100%",
-          backgroundColor: LAVENDER,
+          backgroundColor: PRIME_BLUE,
           paddingTop: 5,
         }}
       >
-        {/* LAVENDER */}
         <Typography
           variant="h3"
           color={"white"}
@@ -153,11 +156,11 @@ const Team = () => {
         >
           {founders &&
             founders.map(
-              (card, index) =>
+              (card) =>
                 !card.founder && (
                   <>
                     <Card
-                      key={index}
+                      key={card.id}
                       sx={{
                         maxWidth: 345,
                         paddingX: 4,
@@ -165,6 +168,7 @@ const Team = () => {
                         marginX: 2,
                         marginY: 2,
                         backgroundColor: "white",
+                        flex: matches ? "1 1 0": 'none',
                       }}
                     >
                       <CardActionArea>
@@ -176,7 +180,7 @@ const Team = () => {
 
                         <CardContent>
                           <Typography
-                            color={LAVENDER}
+                            color={PRIME_BLUE}
                             gutterBottom
                             variant="h4"
                             component="div"
@@ -184,14 +188,14 @@ const Team = () => {
                             {card.firstName + " " + card.lastName}
                           </Typography>
                           <Typography
-                            color={LAVENDER}
+                            color={PRIME_BLUE}
                             gutterBottom
                             variant="h5"
                             component="div"
                           >
                             {card.title}
                           </Typography>
-                          <Typography color={LAVENDER} variant="body2">
+                          <Typography color={PRIME_BLUE} variant="body2">
                             {card.blurb}
                           </Typography>
                         </CardContent>

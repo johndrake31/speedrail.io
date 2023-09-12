@@ -5,7 +5,7 @@ import { themeColors } from "../constants/colors";
 const Mission = () => {
   const matches = useMediaQuery("(min-width:700px)");
 
-  const { WHITE, PRIME_BLUE } = themeColors;
+  const { WHITE, PRIME_BLUE, } = themeColors;
   return (
     <Box
       sx={{
@@ -44,34 +44,29 @@ const Mission = () => {
       </Box>
       <Box
         sx={{
+          backgroundColor: WHITE,
           display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
+          flexDirection: "column",
+          textAlign: "center",
+          // justifyContent: "center",
+          // alignItems: "center",
           padding: 3,
         }}
       >
         <Typography
-          variant="h1"
+          variant="h5"
           sx={{
             fontFamily: "Outfit",
-            fontWeight: 500,
+            fontWeight: 300,
             color: PRIME_BLUE,
-            marginRight: 2,
+            paddingTop: 2,
+            marginBottom: 2,
           }}
         >
-          25X
+          Focus on what truly matters, taking care of your guests
         </Typography>
-        <Typography
-          variant="h6"
-          sx={{
-            fontFamily: "Outfit",
-            fontWeight: 500,
-            maxWidth: 700,
-            textAlign: "left",
-          }}
-        >
-          Did you know that it costs up to 25X more to acquire a new customer
-          than to retain an existing one?
+        <Typography variant="h6" sx={{}}>
+          Be the first to know when tech fails instead of after a bad guest experience or an angry staff phone call
         </Typography>
       </Box>
     </Box>
@@ -79,3 +74,7 @@ const Mission = () => {
 };
 
 export default Mission;
+
+
+
+
